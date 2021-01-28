@@ -10,7 +10,7 @@ import {
 
 export default function Tile({ q, r, fill }) {
   return (
-    <Hexagon q={q} r={r} fill={fill}>
+    <Hexagon className="wheat" q={q} r={r} fill={fill}>
       <Text style={{ color: "red" }}>{`${q}, ${r}`}</Text>
     </Hexagon>
   );

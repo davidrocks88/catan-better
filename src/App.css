@@ -59,10 +59,17 @@ svg g:hover text {
 }
 
 svg g polygon {
-  stroke: #7be3f6;
+  stroke: #0c4b2b;
   stroke-width: 0.2;
   transition: fill-opacity 0.5s;
 }
+
+svg g polygon .wheat {
+  stroke: red;
+  stroke-width: 0.2;
+  transition: fill-opacity 0.5s;
+}
+
 svg g text {
   font-size: 0.22em;
   fill: white;
