@@ -55,11 +55,10 @@ const patterns = [
 ];
 
 // https://github.com/Hellenic/react-hexgrid
-export default function Grid() {
-  let i = 0;
+export default function Grid({ seed }) {
   return (
     <HexGrid
-      className="wheat"
+      className={seed}
       width={1200}
       height={800}
       viewBox="-50 -50 100 100"
@@ -72,7 +71,11 @@ export default function Grid() {
         origin={{ x: 0, y: 0 }}
       >
         {coordinates.map((c) => (
-          <Tile q={c.q} r={c.r} fill={patterns[i++ % patterns.length].id} />
+          <Tile
+            q={c.q}
+            r={c.r}
+            fill={patterns[Math.floor(Math.random() * 5)].id}
+          />
         ))}
 
         {/* <Path start={new Hex(0, 0, 0)} end={new Hex(-2, 0, 1)} /> */}

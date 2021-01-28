@@ -1,20 +1,18 @@
-import {
-  HexGrid,
-  Layout,
-  Hexagon,
-  Text,
-  Pattern,
-  Path,
-  Hex,
-} from "react-hexgrid";
+import { useState } from "react";
 import "./App.css";
 import Grid from "./Grid/Grid";
-import Tile from "./Tile/Tile";
 
 function App() {
+  const [seed, setSeed] = useState(Math.random());
   return (
     <div className="App">
-      <Grid />
+      <h1>Catan Better</h1>
+
+      <Grid seed={seed} />
+      <br />
+      <button class="generate" onClick={() => setSeed(Math.random())}>
+        Generate
+      </button>
     </div>
   );
 }

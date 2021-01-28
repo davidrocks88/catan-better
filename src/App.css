@@ -84,3 +84,7 @@ svg path {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+
+button {
+  color: "red";
+}
